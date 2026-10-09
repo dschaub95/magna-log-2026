@@ -1,0 +1,2 @@
+pipeline,dataset,condition,chamfer,gw,rel_err_matched,mae_matched,mse_matched,rmse_matched,note
+EGNCA,Bunny-512,standard_rollout,,0.0938,0.4790,0.1750,0.0476,0.2180,only standard rollout evaluated -- init/perturbation protocol not applicable/does not work for EGNCA

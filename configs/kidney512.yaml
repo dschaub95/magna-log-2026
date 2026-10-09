@@ -1,0 +1,140 @@
+# Exported from W&B run mt0tv0yr (Kidney512)
+project: magna
+run_name: null
+group: null
+notes: null
+wandb_mode: disabled
+wandb_dir: outputs
+save_model: false
+data:
+  path: data/real/04-kidney_anca_0029040_region_4_cc6_512.h5ad
+  obsm_key: spatial
+  target_obsm_key: null
+  init_obsm_key: null
+  init_heading_obsm_key: null
+  id_features: null
+  color_key: cell_type_no_tcr
+  coordinate_scale: 4.0
+env:
+  num_envs: 1
+  size: auto
+  auto_size_buffer: 150.0
+  bounded: true
+  circular: true
+  width: 2883
+  height: 2883
+  depth: 2883
+  agent_radius: 1
+  render_agent_radius: 4.0
+  draw_obs_graph: false
+  draw_perception_radius: false
+  collision_iters: 0
+  collision_grid_size: 2
+  k: 8
+  perception_radius: 250.0
+  neighbor_graph: radius_topk
+  mutual_obs_bit: true
+  target_neighbor_bit: false
+  perceived_ratio_obs: false
+  density_grad_obs: false
+  density_grad_log_norm: false
+  local_frame_obs: false
+  self_pos_delta_obs: true
+  boundary_dist_obs: false
+  boundary_penalty: -0.3254315350889754
+  enforce_connected: false
+  disconnect_penalty: 0.0
+  terminate_on_disconnect: false
+  lam_nbr_reward: 0.6937607903169871
+  reward_scaler: 0.6120616928056514
+  reward_min_distance: 0.0
+  reward_mode: interval_v1
+  reward_interval_multiplier: 1.7726843884168204
+  match_roles_once: false
+  max_speed: 4.0
+  time_horizon: 2048
+  reset_distribution: sunflower
+  fit_init_to_target_bbox: false
+  reset_init: 1.0
+  reset_rotated_target: 0.0
+  reset_interpolated: 0.0
+  reuse_initial_positions: false
+  recenter_on_step: true
+  log_interval: 128
+  verbose: 0
+vector:
+  num_envs: 64
+  num_workers: 16
+  batch_size: auto
+  zero_copy: true
+  seed: 42
+  backend: multiprocessing
+model:
+  hidden_size: 128
+  encoder_layers: 1
+  id_feature_encoder: false
+  learned_id_dim: 0
+  learned_id_init: gaussian
+  mask_nontarget_id_features: false
+  null_msg_learnable: false
+  message_agg: concat
+  cell_encoder: raw
+  comm_enabled: true
+  comm_msg_dim: 32
+  comm_select_action: false
+  action_stay_bias: 0.1377694882435351
+train:
+  seed: 42
+  torch_deterministic: true
+  cpu_offload: false
+  device: cuda
+  optimizer: muon
+  precision: float32
+  total_timesteps: 1600000000
+  learning_rate: 0.017395210739079868
+  embedding_learning_rate: 0.005
+  embedding_weight_decay: 0.0
+  embedding_pretrain_steps: 10000
+  embedding_pretrain_progbar: false
+  embedding_pretrain_learning_rate: 0.01
+  embedding_pretrain_min_learning_rate: 0.0001
+  embedding_pretrain_weight_decay: 0.0001
+  embedding_pretrain_margin: 0.5
+  embedding_pretrain_edge_coef: 10000.0
+  embedding_pretrain_order_coef: 1.0
+  anneal_lr: true
+  min_lr_ratio: 0.0
+  lr_cosine_power: 1.0
+  gamma: 0.99
+  gae_lambda: 0.9
+  update_epochs: 1
+  clip_coef: 0.2
+  vf_coef: 2.849268054788023
+  vf_clip_coef: 0.2
+  max_grad_norm: 1.5
+  ent_coef: 0.023068032965622497
+  adam_beta1: 0.95
+  adam_beta2: 0.999
+  adam_eps: 1.0e-12
+  data_dir: outputs/runs/kidney512
+  checkpoint_interval: 200
+  batch_size: auto
+  minibatch_size: 786432
+  max_minibatch_size: 786432
+  auto_minibatch_divisor: 4
+  bptt_horizon: 96
+  compile: false
+  compile_mode: max-autotune-no-cudagraphs
+  compile_fullgraph: false
+  vtrace_rho_clip: 1.0
+  vtrace_c_clip: 1.0
+  prio_alpha: 0.8
+  prio_beta0: 0.2
+  use_rnn: true
+  replay_segment_state: false
+  env: MultiCellEnv
+  n_repeat: 1
+  print_dashboard: false
+  print_config: false
+  generate_rollout_video: false
+  track_error_init: false

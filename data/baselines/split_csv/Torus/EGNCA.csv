@@ -1,0 +1,2 @@
+pipeline,dataset,condition,chamfer,gw,rel_err_matched,mae_matched,mse_matched,rmse_matched,note
+EGNCA,Torus,standard_rollout,,0.1280,0.4650,0.2140,0.0712,0.2670,only standard rollout evaluated -- init/perturbation protocol not applicable/does not work for EGNCA

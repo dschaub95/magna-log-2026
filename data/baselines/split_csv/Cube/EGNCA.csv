@@ -1,0 +1,2 @@
+pipeline,dataset,condition,chamfer,gw,rel_err_matched,mae_matched,mse_matched,rmse_matched,note
+EGNCA,Cube,standard_rollout,,0.0800,0.4540,0.1690,0.0443,0.2100,only standard rollout evaluated -- init/perturbation protocol not applicable/does not work for EGNCA

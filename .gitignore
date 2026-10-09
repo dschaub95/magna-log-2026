@@ -1,0 +1,36 @@
+# Temp files
+.DS_Store
+*~
+buck-out/
+
+# Compiled files
+.venv/
+__pycache__/
+.*cache/
+
+# Distribution / packaging
+/dist/
+
+# Tests and coverage
+/node_modules/
+/.coverage*
+
+# generated experiment data; targets and baselines are tracked
+data/*
+!data/pattern_formation/
+!data/real/
+!data/baselines/
+
+outputs/*
+!outputs/.gitkeep
+
+wandb/
+
+# pufferlib specific
+resources
+*.so
+build/
+.nfs*
+
+.env
+.clangd

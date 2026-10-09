@@ -1,0 +1,9 @@
+pipeline,dataset,condition,chamfer,gw,rel_err_matched,mae_matched,mse_matched,rmse_matched,note
+NPA-full,Torus,native,,0.1223±0.007,,,,,"gw only, computed directly against the FULL dense point cloud (~16384 particles, fixed budget independent of target size) vs the target -- no reduction/matching step. Mean±std over 5 eval seeds (0-4), 128-step rollout (validation.step_range)."
+NPA-full,Torus,init_gaussian,,0.4845±0.047,,,,,mean±std over 5 seeds (0-4), gw vs full dense cloud, 2048-step recovery
+NPA-full,Torus,init_uniform,,0.4928±0.024,,,,,mean±std over 5 seeds (0-4), gw vs full dense cloud, 2048-step recovery
+NPA-full,Torus,init_sunflower,,0.5943±0.058,,,,,mean±std over 5 seeds (0-4), gw vs full dense cloud, 2048-step recovery
+NPA-full,Torus,perturb_local,,1.0185±0.060,,,,,mean±std over 5 seeds (0-4), gw vs full dense cloud, 2048+2048-step recovery
+NPA-full,Torus,perturb_global,,0.4569±0.008,,,,,mean±std over 5 seeds (0-4), gw vs full dense cloud, 2048+2048-step recovery
+NPA-full,Torus,perturb_local_trainmatch_n64,,0.1529±0.022,,,,,"training-matched rollout check (N_HALF=64, total 128, vs currently-reported N_HALF=2048): mean±std over 5 seeds (0-4), same checkpoints/targets as perturb_local"
+NPA-full,Torus,perturb_global_trainmatch_n64,,0.3763±0.012,,,,,"training-matched rollout check (N_HALF=64, total 128, vs currently-reported N_HALF=2048): mean±std over 5 seeds (0-4), same checkpoints/targets as perturb_global"

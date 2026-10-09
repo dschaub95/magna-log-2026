@@ -1,0 +1,2 @@
+pipeline,dataset,condition,chamfer,gw,rel_err_matched,mae_matched,mse_matched,rmse_matched,note
+EGNCA,Grid2d,standard_rollout,,0.0949,0.5770,0.2030,0.0631,0.2510,only standard rollout evaluated -- init/perturbation protocol not applicable/does not work for EGNCA

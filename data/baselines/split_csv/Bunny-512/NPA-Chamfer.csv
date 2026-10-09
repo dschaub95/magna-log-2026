@@ -1,0 +1,9 @@
+pipeline,dataset,condition,chamfer,gw,rel_err_matched,mae_matched,mse_matched,rmse_matched,note
+NPA-Chamfer,Bunny-512,native,0.0676±0.003,0.0663±0.006,0.1592±0.018,0.0502±0.005,0.0053±0.001,0.0724±0.008,"eps0=0.6, 2048 steps, mean±std over Darius's 5 eval seeds (0-4)"
+NPA-Chamfer,Bunny-512,init_gaussian,0.3681±0.051,0.1212±0.006,0.2812±0.013,0.1016±0.005,0.0164±0.001,0.1280±0.006,
+NPA-Chamfer,Bunny-512,init_uniform,0.5120±0.032,0.1193±0.003,0.2923±0.009,0.1033±0.003,0.0177±0.001,0.1330±0.004,
+NPA-Chamfer,Bunny-512,init_sunflower,0.2981±0.000,0.1045±0.000,0.2530±0.000,0.0850±0.000,0.0133±0.000,0.1151±0.000,
+NPA-Chamfer,Bunny-512,perturb_local,0.1137±0.006,0.0883±0.010,0.2093±0.016,0.0659±0.003,0.0091±0.001,0.0953±0.007,
+NPA-Chamfer,Bunny-512,perturb_global,0.5593±0.089,0.2185±0.018,0.5063±0.038,0.1968±0.018,0.0534±0.008,0.2304±0.017,
+NPA-Chamfer,Bunny-512,perturb_local_trainmatch_n64,0.1198±0.030,0.0997±0.008,0.2199±0.031,0.0705±0.010,0.0102±0.003,0.1001±0.014,"training-matched rollout check (N_HALF=64, total 128, vs currently-reported N_HALF=2048): mean±std over 5 seeds (0-4), same checkpoints/targets as perturb_local"
+NPA-Chamfer,Bunny-512,perturb_global_trainmatch_n64,0.5697±0.087,0.2191±0.019,0.5060±0.039,0.1969±0.018,0.0534±0.008,0.2303±0.018,"training-matched rollout check (N_HALF=64, total 128, vs currently-reported N_HALF=2048): mean±std over 5 seeds (0-4), same checkpoints/targets as perturb_global"

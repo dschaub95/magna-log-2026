@@ -1,0 +1,9 @@
+pipeline,dataset,condition,chamfer,gw,rel_err_matched,mae_matched,mse_matched,rmse_matched,note
+NPA-Chamfer,Torus,native,0.1314±0.004,0.1174±0.004,0.1701±0.015,0.0674±0.006,0.0096±0.002,0.0977±0.009,"eps0=0.7, 2048 steps, mean±std over Darius's 5 eval seeds (0-4)"
+NPA-Chamfer,Torus,init_gaussian,0.4392±0.056,0.2002±0.019,0.3580±0.034,0.1715±0.021,0.0427±0.008,0.2056±0.020,
+NPA-Chamfer,Torus,init_uniform,0.3439±0.015,0.1364±0.005,0.2386±0.013,0.1058±0.005,0.0188±0.002,0.1370±0.008,
+NPA-Chamfer,Torus,init_sunflower,0.5352±0.000,0.2011±0.000,0.3583±0.000,0.1763±0.000,0.0423±0.000,0.2058±0.000,
+NPA-Chamfer,Torus,perturb_local,0.1902±0.021,0.1223±0.021,0.2243±0.037,0.0910±0.014,0.0171±0.006,0.1288±0.021,
+NPA-Chamfer,Torus,perturb_global,0.6081±0.062,0.2919±0.019,0.5202±0.034,0.2636±0.019,0.0896±0.012,0.2987±0.020,
+NPA-Chamfer,Torus,perturb_local_trainmatch_n64,0.2105±0.028,0.1382±0.026,0.2383±0.050,0.0988±0.019,0.0195±0.008,0.1368±0.029,"training-matched rollout check (N_HALF=64, total 128, vs currently-reported N_HALF=2048): mean±std over 5 seeds (0-4), same checkpoints/targets as perturb_local"
+NPA-Chamfer,Torus,perturb_global_trainmatch_n64,0.6132±0.066,0.2923±0.020,0.5213±0.035,0.2645±0.020,0.0900±0.012,0.2994±0.020,"training-matched rollout check (N_HALF=64, total 128, vs currently-reported N_HALF=2048): mean±std over 5 seeds (0-4), same checkpoints/targets as perturb_global"

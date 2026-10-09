@@ -1,0 +1,9 @@
+pipeline,dataset,condition,chamfer,gw,rel_err_matched,mae_matched,mse_matched,rmse_matched,note
+NPA-full,Cube,native,,0.0890±0.006,,,,,"gw only, computed directly against the FULL dense point cloud (~16384 particles, fixed budget independent of target size) vs the target -- no reduction/matching step. Mean±std over 5 eval seeds (0-4), 128-step rollout (validation.step_range)."
+NPA-full,Cube,init_gaussian,,0.5508±0.022,,,,,mean±std over 5 seeds (0-4), gw vs full dense cloud, 2048-step recovery
+NPA-full,Cube,init_uniform,,0.4989±0.022,,,,,mean±std over 5 seeds (0-4), gw vs full dense cloud, 2048-step recovery
+NPA-full,Cube,init_sunflower,,0.4893±0.026,,,,,mean±std over 5 seeds (0-4), gw vs full dense cloud, 2048-step recovery
+NPA-full,Cube,perturb_local,,4.4837±1.811,,,,,"mean±std over 5 seeds (0-4), gw vs full dense cloud, 2048+2048-step recovery -- high variance across seeds, model struggles to recover from a local perturbation on this dataset"
+NPA-full,Cube,perturb_global,,0.9751±0.930,,,,,"mean±std over 5 seeds (0-4), gw vs full dense cloud, 2048+2048-step recovery -- high variance across seeds"
+NPA-full,Cube,perturb_local_trainmatch_n64,,0.1468±0.045,,,,,"training-matched rollout check (N_HALF=64, total 128, vs currently-reported N_HALF=2048): mean±std over 5 seeds (0-4), same checkpoints/targets as perturb_local"
+NPA-full,Cube,perturb_global_trainmatch_n64,,0.1570±0.004,,,,,"training-matched rollout check (N_HALF=64, total 128, vs currently-reported N_HALF=2048): mean±std over 5 seeds (0-4), same checkpoints/targets as perturb_global"
