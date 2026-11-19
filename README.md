@@ -1,5 +1,7 @@
 # Learning Graph Neural Cellular Automata via Multi-Agent Reinforcement Learning
 
+[MAGNA was accepted at LoG 2026.](https://openreview.net/forum?id=3dSqRhT8pV)
+
 Code, configs, data, and trained weights for MAGNA (Multi-Agent Graph Neural Cellular Automata): a shared decentralized policy with which moving agents, each using only local observations and neighbor messages on a dynamic geometric graph, self-organize into a target structure. The Python package is `magna`.
 
 ## Installation
@@ -84,7 +86,17 @@ Cell-type annotations in that file are used only for visualization.
 
 ## Citation
 
-TBD
+If you use MAGNA in your research, please cite the paper.
+
+```bibtex
+@inproceedings{schaub2026learning,
+  title = {Learning Graph Neural Cellular Automata via Multi-Agent Reinforcement Learning},
+  author = {Darius P. Schaub and Lucia Testa and Robin Khatri and Stefan Bonn},
+  booktitle = {The Fifth Learning on Graphs Conference},
+  year = {2026},
+  url = {https://openreview.net/forum?id=3dSqRhT8pV}
+}
+```
 
 ## License
 
